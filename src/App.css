@@ -1,3 +1,14 @@
 body{
   margin: 0;
 }
+.imgUrl{
+  height: 100%;
+  width: 100%;
+  top: 0;
+  overflow: hidden;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter:  brightness(50%);
+}
