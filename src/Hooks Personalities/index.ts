@@ -1,0 +1,8 @@
+import { useSelector } from 'react-redux';
+import { reducer } from '../main';
+export const useData=()=>{
+    return useSelector((state:reducer)=>state.data.data)
+}
+export const useShowMovie=()=>{
+    return useSelector((state:reducer)=>state.data.showMovie)
+}

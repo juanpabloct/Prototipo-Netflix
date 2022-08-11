@@ -1,6 +1,6 @@
 import { Genres } from "../types/genres/TypeGenres";
 
-export const genres=[
+export const genres:Genres[]=[
       {
         "id": 28,
         "name": "Action"

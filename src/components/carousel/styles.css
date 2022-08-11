@@ -1,0 +1,15 @@
+.contain_all_carousel{
+    width: 100%;
+    overflow: hidden;
+    background-color: black;
+}
+.contain_carousel{
+    display: flex
+}
+.contain_carousel figure img {
+    width: 30vh;
+}
+figcaption{
+    color: white;
+    text-align: center;
+}
