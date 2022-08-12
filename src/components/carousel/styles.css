@@ -1,15 +1,34 @@
 .contain_all_carousel{
-    width: 100%;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
     background-color: black;
+    width: 100vw;
 }
 .contain_carousel{
-    display: flex
+    display: flex;
+    flex-direction: row;
 }
 .contain_carousel figure img {
     width: 30vh;
 }
 figcaption{
+    color: white;
+    text-align: center;
+}
+.parentSlider{
+    display: flex;
+}
+.contentImage{
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+    align-items: center;
+}
+.contentImage img{
+    width: 100%;
+}
+
+.gender{
     color: white;
     text-align: center;
 }

@@ -17,7 +17,8 @@
 }
 
 .contentInfo{
-    margin:5rem;
+    width: 100vw;
+    margin-left:5rem;
     color:white;
 }
 .title{
