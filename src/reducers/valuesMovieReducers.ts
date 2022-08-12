@@ -3,6 +3,7 @@ import { Movie, OriginalLanguage, TypeMoviesInfo } from "../types/data";
 export interface InitialState {
   data: TypeMoviesInfo[];
   showMovie: Movie;
+  popular:TypeMoviesInfo
   error: string;
   loading: boolean;
 }
@@ -24,6 +25,7 @@ const initialState: InitialState = {
     vote_average: 0,
     vote_count: 0,
   },
+  popular:{name:"", movies:[]},
   error: "",
   loading: false,
 };
@@ -43,9 +45,12 @@ export const ValuesMovieReducer = createSlice({
     setLoading: (state) => {
       state.loading = false;
     },
+    setPopular:(state, {payload}:{payload:TypeMoviesInfo})=>{
+      state.popular=payload
+    }
   },
 });
 
 export default ValuesMovieReducer;
-export const { setData, setLoading, setShowMovies } =
+export const { setData, setLoading, setShowMovies, setPopular} =
   ValuesMovieReducer.actions;

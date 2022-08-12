@@ -1,37 +1,6 @@
 .contain_image{
-    height: 46.2vw;
+    height: 40vw;
     width: 100%;
     overflow: hidden;
     position: absolute;
-}
-.genre{
-    font-size: 2rem;
-}
-.genre::after{
-    content: "|";
-    margin-left: 1.5rem;
-}
-.genre::before{
-    content: "";
-    margin-left: 1.5rem;
-}
-
-.contentInfo{
-    width: 100vw;
-    margin-left:5rem;
-    color:white;
-}
-.title{
-    font-weight: 780;
-    font-size: 3rem;
-}
-.year{
-    text-align: center;
-    width: 50%;
-    font-size: 1.6rem;
-}
-.overview{
-    width: 50%;
-    font-size: 1.5rem;
-    color: #b9b9b9;
 }

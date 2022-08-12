@@ -1,0 +1,21 @@
+@media (min-width:1200px) {
+    .contentImage{
+        width: 20vw;
+    }
+}
+@media (max-width:1200px) {
+    .contentImage{
+        width: 25vw;
+    }
+}
+
+@media (max-width:800px) {
+    .contentImage{
+        width: 34vw;
+    }
+}
+@media (max-width:600px) {
+    .contentImage{
+        width: 50vw;
+    }
+}

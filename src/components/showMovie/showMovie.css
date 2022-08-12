@@ -1,0 +1,36 @@
+.genre{
+    font-size: 1rem;
+}
+.genre::after{
+    content: "|";
+    margin-left: 1.5rem;
+}
+.genre::before{
+    content: "";
+    margin-left: 1.5rem;
+}
+
+.contentInfo{
+    margin-left:5rem;
+    color:white;
+    position: relative;
+
+}
+.title{
+    font-weight: 780;
+    font-size: 1.4rem;
+}
+
+.overview{
+    width: 60%;
+    font-size: 1rem;
+    color: #cecece;
+}
+@media (min-width:1200px) {
+    .overview{
+        font-size: 1.4rem;
+    }
+    .title{
+        font-size: 1.6rem;
+    }
+}

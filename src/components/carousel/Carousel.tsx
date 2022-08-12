@@ -1,19 +1,20 @@
+import { Button, Grid, IconButton } from "@mui/material";
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { setShowMovies } from "../../reducers/valuesMovieReducers";
-import { Movie, TypeMoviesInfo } from "../../types/data/index";
+import { Movie, TypeMoviesInfo } from '../../types/data/index';
 import { ComplementImage } from "../../Var Global/complementImage";
-
-export const Carousel = ({ gender }: { gender: TypeMoviesInfo }) => {
+import "./querys.css"
+export const Carousel = ({ gender }: { gender: TypeMoviesInfo}) => {
   const dispatch = useDispatch();
   const [avanzar, setAvanzar] = useState(0);
   const valor = `-${avanzar}%`;
+
   return (
-    <div>
+    <div className="contain">
       <h1 className="gender">{gender.name}</h1>
-      <button onClick={() => setAvanzar(avanzar !== 80 ? avanzar + 5 : 0)}>
-        {">"}
-      </button>
       <div className="parentSlider">
         <div
           className="contain_carousel"
@@ -30,12 +31,20 @@ export const Carousel = ({ gender }: { gender: TypeMoviesInfo }) => {
                   src={ComplementImage + movie.poster_path}
                   alt={movie.title}
                 />
-                <figcaption>{movie.title}</figcaption>
+                <figcaption className="titleMovie">{movie.title}</figcaption>
               </div>
             );
           })}
         </div>
       </div>
+      <Grid container spacing={2}  justifyContent={"space-between"} marginY={"1rem"} className="contain_button">
+        <IconButton  style={{backgroundColor:"red"}} onClick={() => setAvanzar(avanzar ===0?80:avanzar-5)}>
+          <ChevronLeftIcon/>
+        </IconButton>
+        <IconButton  style={{backgroundColor:"red"}} onClick={() => setAvanzar(avanzar !== 80 ? avanzar + 5 : 0)}>
+        <ChevronRightIcon/>
+        </IconButton>
+      </Grid>
     </div>
   );
 };

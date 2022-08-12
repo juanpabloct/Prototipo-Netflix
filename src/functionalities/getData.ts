@@ -18,5 +18,5 @@ export const getData = async (
     })
   );
   dispatch(setData(value));
-  dispatch(setLoading());
+  dispatch(setLoading())
 };

@@ -1,15 +1,26 @@
+/*Styles sectionCarousel.tsx*/
 .contain_all_carousel{
     display: flex;
     flex-direction: column;
     background-color: black;
     width: 100vw;
+    position: relative;
 }
+
+
+/*Styles Carousel.tsx*/
 .contain_carousel{
     display: flex;
     flex-direction: row;
+    height: 100%;
+    transition: all ease 1s;
+}
+.contain_carousel:first-child:hover{
+    margin-left: 10rem;
 }
 .contain_carousel figure img {
     width: 30vh;
+    height: 90%;
 }
 figcaption{
     color: white;
@@ -17,22 +28,50 @@ figcaption{
 }
 .parentSlider{
     display: flex;
+    width: 100%;
+    height: 100%;
 }
 .contentImage{
     display: flex;
     flex-direction: column;
-    width: 25vw;
     align-items: center;
+    height: 100%;
+    position: relative;
+    transition: all 0.7s;
 }
 .contentImage:hover{
     border: 1px solid white;
     cursor: pointer;
+    transform: scale(1.2);
+    z-index: 30;
 }
 .contentImage img{
     width: 98%;
+    height: 100%;
 }
 
 .gender{
     color: white;
     text-align: center;
+}
+
+.contain{
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+.contain_button{
+    position: absolute;
+}
+.titleMovie{
+    position: absolute;
+    bottom:50%;
+    text-shadow: 30px yellow;
+    width: 90%;
+    text-overflow: ellipsis;
+    font-size: 2rem;
 }

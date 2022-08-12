@@ -5,10 +5,6 @@ import { Carousel } from "./Carousel";
 import "./styles.css";
 export const SectionCarousel = () => {
   const data = useData();
-  console.log(data);
-  useEffect(() => {
-    console.log("sfgsg");
-  });
   return (
     <div className="contain_all_carousel">
       {data.map((movie, id) => {

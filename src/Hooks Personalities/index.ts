@@ -6,3 +6,6 @@ export const useData=()=>{
 export const useShowMovie=()=>{
     return useSelector((state:reducer)=>state.data.showMovie)
 }
+export const usePopulars=()=>{
+    return useSelector((state:reducer)=>state.data.popular)
+}

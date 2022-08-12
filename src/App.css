@@ -5,14 +5,11 @@
 body{
   margin: 0;
 }
-.imgUrl{
-  height: 100%;
+
+.imgUrl >img{
+  height: 100vh;
   width: 100%;
-  top: 0;
-  overflow: hidden;
   position: absolute;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  filter:  brightness(50%);
+  top: 0;
+  filter: brightness(0.4);
 }

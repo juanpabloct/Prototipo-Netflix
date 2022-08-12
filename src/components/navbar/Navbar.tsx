@@ -4,8 +4,14 @@ import { Grid } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import { dateComplete } from "./dates";
 import imgUser from "../../publics/user.jpg";
+import { ComplementImage } from '../../Var Global/complementImage';
+import { useSelector } from "react-redux";
+import { reducer } from '../../main';
 
 export const Navbar = () => {
+  const { backdrop_path } = useSelector((state: reducer) => {
+    return state.data.showMovie;
+  });
   return (
     <header className="navbar">
       <Grid container justifyContent={"space-between"}>
@@ -18,7 +24,7 @@ export const Navbar = () => {
           marginLeft={"3rem"}
           justifyContent={"space-around"}
         >
-          <img src={img} alt="Logo Netflix" title="Logo" />
+          <img src={img} alt="Logo Netflix" title="Logo" className="logo"/>
           <span className="contentNavbar">{dateComplete}</span>
         </Grid>
         <nav className="containIcons">
