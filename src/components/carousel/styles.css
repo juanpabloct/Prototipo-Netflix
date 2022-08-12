@@ -24,8 +24,12 @@ figcaption{
     width: 25vw;
     align-items: center;
 }
+.contentImage:hover{
+    border: 1px solid white;
+    cursor: pointer;
+}
 .contentImage img{
-    width: 100%;
+    width: 98%;
 }
 
 .gender{

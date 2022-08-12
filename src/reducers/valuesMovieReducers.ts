@@ -37,6 +37,9 @@ export const ValuesMovieReducer = createSlice({
       state.showMovie = payload[0].movies[0];
       state.loading = true;
     },
+    setShowMovies: (state, { payload }: { payload: Movie }) => {
+      state.showMovie = payload;
+    },
     setLoading: (state) => {
       state.loading = false;
     },
@@ -44,4 +47,5 @@ export const ValuesMovieReducer = createSlice({
 });
 
 export default ValuesMovieReducer;
-export const { setData, setLoading } = ValuesMovieReducer.actions;
+export const { setData, setLoading, setShowMovies } =
+  ValuesMovieReducer.actions;

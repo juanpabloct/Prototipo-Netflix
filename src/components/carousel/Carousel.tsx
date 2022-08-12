@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { setShowMovies } from "../../reducers/valuesMovieReducers";
 import { Movie, TypeMoviesInfo } from "../../types/data/index";
 import { ComplementImage } from "../../Var Global/complementImage";
 
 export const Carousel = ({ gender }: { gender: TypeMoviesInfo }) => {
+  const dispatch = useDispatch();
   const [avanzar, setAvanzar] = useState(0);
   const valor = `-${avanzar}%`;
   return (
@@ -18,7 +21,11 @@ export const Carousel = ({ gender }: { gender: TypeMoviesInfo }) => {
         >
           {gender.movies.map((movie: Movie) => {
             return (
-              <div key={movie.id} className="contentImage">
+              <div
+                key={movie.id}
+                className="contentImage"
+                onClick={() => dispatch(setShowMovies(movie))}
+              >
                 <img
                   src={ComplementImage + movie.poster_path}
                   alt={movie.title}
