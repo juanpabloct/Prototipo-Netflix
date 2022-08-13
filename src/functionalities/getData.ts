@@ -1,4 +1,4 @@
-import { url } from '../connect api/urlApi';
+import { url } from "../connect api/urlApi";
 import { Genres } from "../types/genres/TypeGenres";
 import { setData, setLoading } from "../reducers/valuesMovieReducers";
 import { AnyAction, Dispatch } from "@reduxjs/toolkit";
@@ -18,5 +18,4 @@ export const getData = async (
     })
   );
   dispatch(setData(value));
-  dispatch(setLoading())
 };

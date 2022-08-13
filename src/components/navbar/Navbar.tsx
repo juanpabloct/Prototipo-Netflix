@@ -4,9 +4,10 @@ import { Grid } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import { dateComplete } from "./dates";
 import imgUser from "../../publics/user.jpg";
-import { ComplementImage } from '../../Var Global/complementImage';
+import { ComplementImage } from "../../Var Global/complementImage";
 import { useSelector } from "react-redux";
-import { reducer } from '../../main';
+import { reducer } from "../../main";
+import "./querys.css";
 
 export const Navbar = () => {
   const { backdrop_path } = useSelector((state: reducer) => {
@@ -24,7 +25,7 @@ export const Navbar = () => {
           marginLeft={"3rem"}
           justifyContent={"space-around"}
         >
-          <img src={img} alt="Logo Netflix" title="Logo" className="logo"/>
+          <img src={img} alt="Logo Netflix" title="Logo" className="logo" />
           <span className="contentNavbar">{dateComplete}</span>
         </Grid>
         <nav className="containIcons">

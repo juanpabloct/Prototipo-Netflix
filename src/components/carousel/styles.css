@@ -16,15 +16,11 @@
     transition: all ease 1s;
 }
 .contain_carousel:first-child:hover{
-    margin-left: 10rem;
+    margin-left: 2rem;
 }
 .contain_carousel figure img {
     width: 30vh;
     height: 90%;
-}
-figcaption{
-    color: white;
-    text-align: center;
 }
 .parentSlider{
     display: flex;
@@ -40,9 +36,9 @@ figcaption{
     transition: all 0.7s;
 }
 .contentImage:hover{
-    border: 1px solid white;
+    border: 0.2rem solid white;
     cursor: pointer;
-    transform: scale(1.2);
+    transform: scale(1.1);
     z-index: 30;
 }
 .contentImage img{
@@ -51,8 +47,9 @@ figcaption{
 }
 
 .gender{
-    color: white;
+    color: rgb(183, 183, 183);
     text-align: center;
+    z-index: 20;	
 }
 
 .contain{
@@ -70,8 +67,11 @@ figcaption{
 .titleMovie{
     position: absolute;
     bottom:50%;
-    text-shadow: 30px yellow;
     width: 90%;
     text-overflow: ellipsis;
+    font-family: Roboto;
+    font-weight: 600;
     font-size: 2rem;
+    color: rgb(188, 167, 167);
+    text-align: center;
 }
