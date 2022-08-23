@@ -1,7 +1,7 @@
-import { useLayoutEffect, useEffect } from 'react';
+import { useLayoutEffect, useEffect, useState } from 'react';
 import "./App.css";
 import { Navbar } from "./components/navbar/Navbar";
-import { Grid } from "@mui/material";
+import { Avatar, Box, Grid, IconButton, Typography } from "@mui/material";
 import { genres } from "./Var Global/genres";
 import { Main } from "./components/main/main";
 import { useDispatch, useSelector } from "react-redux";
@@ -12,48 +12,36 @@ import { GetPopular } from "./functionalities/getPopular";
 import { getData } from "./functionalities/getData";
 import { Carousel } from "./components/carousel/Carousel";
 import { setLoading } from "./reducers/valuesMovieReducers";
-import { Cargando } from './components/cargando/cargando';
+import { Cargando } from "./components/cargando/cargando";
+import { Content } from "./components/content/content";
+import imgPerfil from "./assets/profile.jpg";
+import MenuIcon from "@mui/icons-material/Menu";
 function App() {
-  const { loading, data, error, showMovie, popular} = useSelector(
+  const { loading, data, error, showMovie, popular } = useSelector(
     (state: reducer) => state.data
   );
-  const dispatch=useDispatch()
+  const dispatch = useDispatch();
   useEffect(() => {
+    dispatch(setLoading());
+    setTimeout(() => {
+      GetPopular(dispatch);
+      getData(genres, dispatch);
+    }, 3000);
+  }, [dispatch, GetPopular, getData, setLoading]);
+  if (loading) {
+    return (
+      <div className="estate_charge">
+        <Navbar />
+        <Cargando />
+      </div>
+    );
+  } else {
+    return (
+      <>
+        <Content />
+      </>
+    );
+  }
+}
 
-    dispatch(setLoading())
-        setTimeout(()=>{
-          GetPopular(dispatch)
-          getData(genres, dispatch);
-        },3000)
-    }, [dispatch]);
-    if (loading) {
-      return (
-      <div className='estate_charge'>
-    <Navbar/>
-    <Cargando/>
-    </div>
-    )
-    }
-    else {
-      return (
-        <Grid
-        container
-        direction={"column"}
-        justifyContent={"center"}
-        position={"relative"}
-        style={{ overflow: "hidden" }}
-        >
-        <div className="imgUrl" >
-          <img className='img' src={ComplementImage+showMovie.backdrop_path} alt="" />
-          <div className='color'></div>
-          <Navbar />
-          <ShowMovie/>
-          <Carousel gender={popular}/>
-        </div>
-        <Main />
-        </Grid>
-        )}
-        
-      }
-        
-        export default App;
+export default App;

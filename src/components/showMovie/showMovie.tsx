@@ -4,8 +4,6 @@ import { genres } from "../../Var Global/genres";
 import { Calificion } from "../caliificacion/calificacion";
 import { Button, Grid } from "@mui/material";
 import PlayCircleFilledWhiteIcon from '@mui/icons-material/PlayCircleFilledWhite';
-import { useEffect } from "react";
-import { getData } from "../../functionalities/getData";
 import "./showMovie.css"
 import { GetPopular } from '../../functionalities/getPopular';
 export const ShowMovie=()=>{
