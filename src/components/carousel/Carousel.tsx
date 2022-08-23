@@ -31,7 +31,6 @@ export const Carousel = ({ gender }: { gender: TypeMoviesInfo}) => {
                   src={ComplementImage + movie.poster_path}
                   alt={movie.title}
                 />
-                <figcaption className="titleMovie">{movie.title}</figcaption>
               </div>
             );
           })}
