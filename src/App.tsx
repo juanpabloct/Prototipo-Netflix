@@ -44,9 +44,9 @@ function App() {
         style={{ overflow: "hidden" }}
         >
         <div className="imgUrl" >
-          <img src={ComplementImage+showMovie.backdrop_path} alt="" />
+          <img className='img' src={ComplementImage+showMovie.backdrop_path} alt="" />
+          <div className='color'></div>
           <Navbar />
-          {!loading&& <div style={{color:"white"}}>cargando</div>}
           <ShowMovie/>
           <Carousel gender={popular}/>
         </div>

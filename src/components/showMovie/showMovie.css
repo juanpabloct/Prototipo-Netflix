@@ -22,8 +22,9 @@
 }
 
 .overview{
-    width: 60%;
-    font-size: 1rem;
+    width: 50%;
+    font-size: 1.3rem;
+    line-height: 1.7rem;
     color: #cecece;
 }
 @media (min-width:1200px) {
