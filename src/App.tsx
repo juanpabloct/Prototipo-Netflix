@@ -37,12 +37,8 @@ function App() {
           <img src={ComplementImage+showMovie.backdrop_path} alt="" />
           <Navbar />
           {!loading&& <div style={{color:"white"}}>cargando</div>}
-          {loading&&
-          <>
           <ShowMovie/>
           <Carousel gender={popular}/>
-          </>
-          }
         </div>
         <Main />
       </Grid>
