@@ -7,6 +7,7 @@ import { setShowMovies } from "../../reducers/valuesMovieReducers";
 import { Movie, TypeMoviesInfo } from '../../types/data/index';
 import { ComplementImage } from "../../Var Global/complementImage";
 import "./querys.css"
+import { Link } from "react-router-dom";
 export const Carousel = ({ gender }: { gender: TypeMoviesInfo}) => {
   const dispatch = useDispatch();
   const [avanzar, setAvanzar] = useState(0);
@@ -25,23 +26,27 @@ export const Carousel = ({ gender }: { gender: TypeMoviesInfo}) => {
               <div
                 key={movie.id}
                 className="contentImage"
-                onClick={() => dispatch(setShowMovies(movie))}
+                onClick={() => {
+                  dispatch(setShowMovies(movie))
+                  window.scrollTo(0, 0)
+                }
+                }
               >
                 <img
                   src={ComplementImage + movie.poster_path}
                   alt={movie.title}
-                />
+                  />
               </div>
             );
           })}
         </div>
       </div>
-      <Grid container spacing={2}  justifyContent={"space-between"} marginY={"1rem"} className="contain_button">
-        <IconButton  style={{backgroundColor:"red"}} onClick={() => setAvanzar(avanzar ===0?80:avanzar-5)}>
-          <ChevronLeftIcon/>
+      <Grid container spacing={2} sx={{width:"95%"}} justifyContent={"space-between"} marginY={"1rem"} className="contain_button">
+        <IconButton  style={{backgroundColor:"#ff000dd4"}} onClick={() => setAvanzar(avanzar ===0?80:avanzar-5)}>
+          <ChevronLeftIcon sx={{color:"##685454a8"}}/>
         </IconButton>
-        <IconButton  style={{backgroundColor:"red"}} onClick={() => setAvanzar(avanzar !== 80 ? avanzar + 5 : 0)}>
-        <ChevronRightIcon/>
+        <IconButton  style={{backgroundColor:"#ff000dd4"}} onClick={() => setAvanzar(avanzar !== 80 ? avanzar + 5 : 0)}>
+          <ChevronRightIcon sx={{color:"##685454a8"}}/>
         </IconButton>
       </Grid>
     </div>
