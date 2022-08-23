@@ -37,13 +37,13 @@ export const ValuesMovieReducer = createSlice({
     setData: (state, { payload }) => {
       state.data = payload;
       state.showMovie = payload[0].movies[0];
-      state.loading = true;
+      state.loading = false;
     },
     setShowMovies: (state, { payload }: { payload: Movie }) => {
       state.showMovie = payload;
     },
     setLoading: (state) => {
-      state.loading = false;
+      state.loading = true;
     },
     setPopular:(state, {payload}:{payload:TypeMoviesInfo})=>{
       state.popular=payload

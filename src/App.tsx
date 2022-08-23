@@ -12,28 +12,38 @@ import { GetPopular } from "./functionalities/getPopular";
 import { getData } from "./functionalities/getData";
 import { Carousel } from "./components/carousel/Carousel";
 import { setLoading } from "./reducers/valuesMovieReducers";
+import { Cargando } from './components/cargando/cargando';
 function App() {
   const { loading, data, error, showMovie, popular} = useSelector(
     (state: reducer) => state.data
   );
   const dispatch=useDispatch()
-  useLayoutEffect(() => {
-    setTimeout(
-      ()=>{
-        GetPopular(dispatch)
-        getData(genres, dispatch);
-      }, 600
-      )
+  useEffect(() => {
+
+    dispatch(setLoading())
+        setTimeout(()=>{
+          GetPopular(dispatch)
+          getData(genres, dispatch);
+        },3000)
     }, [dispatch]);
-    return (
-    <Grid
-    container
-    direction={"column"}
-    justifyContent={"center"}
-    position={"relative"}
-    style={{ overflow: "hidden" }}
-    >
-          <div className="imgUrl" >
+    if (loading) {
+      return (
+      <div className='estate_charge'>
+    <Navbar/>
+    <Cargando/>
+    </div>
+    )
+    }
+    else {
+      return (
+        <Grid
+        container
+        direction={"column"}
+        justifyContent={"center"}
+        position={"relative"}
+        style={{ overflow: "hidden" }}
+        >
+        <div className="imgUrl" >
           <img src={ComplementImage+showMovie.backdrop_path} alt="" />
           <Navbar />
           {!loading&& <div style={{color:"white"}}>cargando</div>}
@@ -41,8 +51,9 @@ function App() {
           <Carousel gender={popular}/>
         </div>
         <Main />
-      </Grid>
+        </Grid>
         )}
-
-
-export default App;
+        
+      }
+        
+        export default App;
