@@ -1,19 +1,22 @@
 import MenuIcon from "@mui/icons-material/Menu";
 import { Box, IconButton, SwipeableDrawer } from "@mui/material";
 import { useState } from "react";
-import { useContextMenu } from "../../../contexts/contextMenu";
+import { Menu } from './menu';
 
 export const MenuButton = () => {
-  const { setShowMenu } = useContextMenu();
+  const [showMenu, setShowMenu]=useState(false)
   return (
+    <>
     <Box marginX={"2rem"} height={"100%"} position={"absolute"}>
       <IconButton
-        onClick={() => {
-          console.log(setShowMenu(false));
-        }}
-      >
+        onClick={() => 
+          setShowMenu(currem=>!currem)
+        }
+        >
         <MenuIcon sx={{ color: "white" }} />
       </IconButton>
+        {showMenu&&<Menu setShowMenu={setShowMenu} />}
     </Box>
+        </>
   );
 };

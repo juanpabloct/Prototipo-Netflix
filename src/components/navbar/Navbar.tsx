@@ -7,7 +7,7 @@ import imgUser from "../../publics/user.jpg";
 import { ComplementImage } from "../../Var Global/complementImage";
 import { useSelector } from "react-redux";
 import { reducer } from "../../main";
-import { MenuButton } from "./menu/menuButton";
+import { MenuButton } from "../menu/menuButton";
 
 export const Navbar = () => {
   const { backdrop_path } = useSelector((state: reducer) => {
@@ -15,7 +15,6 @@ export const Navbar = () => {
   });
   return (
     <header className="navbar">
-      <MenuButton />
       <Grid container justifyContent={"space-between"}>
         <Grid
           container
@@ -24,7 +23,7 @@ export const Navbar = () => {
           maxWidth={"500px"}
           marginLeft={"3rem"}
           justifyContent={"space-around"}
-        >
+          >
           <img src={img} alt="Logo Netflix" title="Logo" className="logo" />
           <span className="contentNavbar">{dateComplete}</span>
         </Grid>

@@ -24,12 +24,16 @@
 }
 
 .overview{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:3;
+    overflow:hidden ;
+    line-clamp: 3;
     width: 50%;
     min-width: 290px;
     font-size: 1.1rem;
     line-height: 1.3rem;
     color: #cecece;
-    display: inline-block;
     margin-bottom: 0;
 }
 

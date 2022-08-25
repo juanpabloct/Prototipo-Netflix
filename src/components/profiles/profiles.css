@@ -1,0 +1,30 @@
+
+.contain_profile{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+}
+.title{
+    text-align: center;
+    word-spacing: 1rem;
+    letter-spacing: 0.3rem;
+    color: white;
+
+}
+.titleProfile{
+    padding-top: 6px;
+    color: white;
+    padding-top:1rem;
+}
+.profile{
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+.sectionProfiles{
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    justify-content: space-around;
+}

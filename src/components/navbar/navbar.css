@@ -1,9 +1,10 @@
 .navbar{
     width: 100%;
-    margin-left: 2rem;
+    margin-left: rem;
     margin-top: 2rem;
     margin-bottom: 1.5rem;
     position: relative;
+    height: 100%;
 }
 .navbar img{
     width: 18%;

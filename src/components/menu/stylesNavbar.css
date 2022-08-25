@@ -1,0 +1,10 @@
+/*Styles of the component menu*/
+.sectionMenu{
+  color: white;
+}
+
+.sectionMenu:hover{
+    background-color: black;
+    cursor: pointer;
+    color: rgb(184, 184, 184);
+  }

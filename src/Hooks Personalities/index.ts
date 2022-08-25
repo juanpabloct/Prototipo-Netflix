@@ -9,3 +9,6 @@ export const useShowMovie=()=>{
 export const usePopulars=()=>{
     return useSelector((state:reducer)=>state.data.popular)
 }
+export const useProfiles=()=>{
+    return useSelector((state:reducer)=>state.profiles)
+}
