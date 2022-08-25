@@ -1,16 +1,30 @@
-import { createContext, ReactNode, useContext, useState } from "react";
+import {
+  Component,
+  createContext,
+  ReactHTML,
+  ReactNode,
+  ReactPortal,
+  useContext,
+  useState,
+} from "react";
 
-export const createContextMenu=createContext<{ showMenu: unknown; setShowMenu:unknown}>({setShowMenu:"", showMenu:""})
+export const CreateContextMenu = createContext<{
+  showMenu: boolean;
+  setShowMenu: boolean | any;
+}>({
+  showMenu: false,
+  setShowMenu: false,
+});
+export const ContextMenuProvider = ({ children }: { children: ReactNode }) => {
+  const [showMenu, setShowMenu] = useState(false);
 
-    export const contextMenuProvider=({element}:{element :ReactNode})=>{
-    const [showMenu, setShowMenu]=useState(false)
-    return (
-        <createContextMenu.Provider value={{showMenu, setShowMenu}}>
-            {element}
-        </createContextMenu.Provider>
-    )
-}
-export const useContextMenu=()=>{
-    const contexto=useContext(createContextMenu)
-    return contexto
-}
+  return (
+    <CreateContextMenu.Provider value={{ showMenu, setShowMenu }}>
+      {children}
+    </CreateContextMenu.Provider>
+  );
+};
+export const useContextMenu = () => {
+  const contexto = useContext(CreateContextMenu);
+  return contexto;
+};

@@ -1,10 +1,13 @@
 .navbar{
     width: 100%;
+    margin-left: 2rem;
     margin-top: 2rem;
+    margin-bottom: 1.5rem;
     position: relative;
 }
 .navbar img{
-    width: 30%;
+    width: 18%;
+    margin-left: 2rem;
 }
 .logo{
     min-width: 100px;

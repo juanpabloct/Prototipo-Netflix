@@ -1,21 +1,21 @@
 @media (min-width:1200px) {
-    .contentImage{
-        width: 20vw;
+    .imgMovie{
+        width: 18vw;
     }
 }
 @media (max-width:1200px) {
-    .contentImage{
-        width: 25vw;
+    .imgMovie{
+        width: 22vw;
     }
 }
 
 @media (max-width:800px) {
-    .contentImage{
+    .imgMovie{
         width: 34vw;
     }
 }
 @media (max-width:600px) {
-    .contentImage{
+    .imgMovie{
         width: 50vw;
     }
 }

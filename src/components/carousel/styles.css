@@ -14,14 +14,12 @@
     flex-direction: row;
     height: 100%;
     transition: all ease 1s;
+    gap: 2rem;
 }
 .contain_carousel:first-child:hover{
     margin-left: 10rem;
 }
-.contain_carousel figure img {
-    width: 30vh;
-    height: 90%;
-}
+
 figcaption{
     color: white;
     text-align: center;
@@ -31,23 +29,17 @@ figcaption{
     width: 100%;
     height: 100%;
 }
-.contentImage{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+.imgMovie{
     height: 100%;
     position: relative;
     transition: all 0.7s;
 }
-.contentImage:hover{
-    border: 1px solid white;
+.imgMovie:hover{
+    border: 3px solid white;
     cursor: pointer;
     transform: scale(1.2);
     z-index: 30;
-}
-.contentImage img{
-    width: 98%;
-    height: 100%;
 }
 
 .gender{
@@ -56,8 +48,6 @@ figcaption{
 }
 
 .contain{
-    width: 100vw;
-    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;

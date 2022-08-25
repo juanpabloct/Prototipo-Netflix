@@ -17,21 +17,28 @@
 
 }
 .title{
-    font-weight: 780;
-    font-size: 1.4rem;
+    margin-top: 6px;
+    font-weight: 800;
+    font-size: 1.3rem;
+    margin-bottom: 0;
 }
 
 .overview{
     width: 50%;
-    font-size: 1.3rem;
-    line-height: 1.7rem;
+    min-width: 290px;
+    font-size: 1.1rem;
+    line-height: 1.3rem;
     color: #cecece;
+    display: inline-block;
+    margin-bottom: 0;
 }
+
 @media (min-width:1200px) {
     .overview{
-        font-size: 1.4rem;
+        font-size: 1rem;
+        line-height: 1.5rem;
     }
     .title{
-        font-size: 1.6rem;
+        font-size: 2rem;
     }
 }

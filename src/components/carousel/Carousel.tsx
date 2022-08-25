@@ -1,20 +1,27 @@
-import { Button, Grid, IconButton } from "@mui/material";
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-import { useEffect, useState } from "react";
+import { Grid, IconButton } from "@mui/material";
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
+import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { setShowMovies } from "../../reducers/valuesMovieReducers";
-import { Movie, TypeMoviesInfo } from '../../types/data/index';
+import { Movie, TypeMoviesInfo } from "../../types/data/index";
 import { ComplementImage } from "../../Var Global/complementImage";
-import "./querys.css"
-import { Link } from "react-router-dom";
-export const Carousel = ({ gender }: { gender: TypeMoviesInfo}) => {
+import "./querys.css";
+export const Carousel = ({
+  gender,
+  width = "100vw",
+  height = "100%",
+}: {
+  gender: TypeMoviesInfo;
+  width: string;
+  height: string;
+}) => {
   const dispatch = useDispatch();
   const [avanzar, setAvanzar] = useState(0);
   const valor = `-${avanzar}%`;
 
   return (
-    <div className="contain">
+    <div className="contain" style={{ width, height }}>
       <h1 className="gender">{gender.name}</h1>
       <div className="parentSlider">
         <div
@@ -23,30 +30,39 @@ export const Carousel = ({ gender }: { gender: TypeMoviesInfo}) => {
         >
           {gender.movies.map((movie: Movie) => {
             return (
-              <div
+              <img
+                className="imgMovie"
                 key={movie.id}
-                className="contentImage"
+                src={ComplementImage + movie.poster_path}
+                alt={movie.title}
                 onClick={() => {
-                  dispatch(setShowMovies(movie))
-                  window.scrollTo(0, 0)
-                }
-                }
-              >
-                <img
-                  src={ComplementImage + movie.poster_path}
-                  alt={movie.title}
-                  />
-              </div>
+                  dispatch(setShowMovies(movie));
+                  window.scrollTo(0, 0);
+                }}
+              />
             );
           })}
         </div>
       </div>
-      <Grid container spacing={2} sx={{width:"95%"}} justifyContent={"space-between"} marginY={"1rem"} className="contain_button">
-        <IconButton  style={{backgroundColor:"#ff000dd4"}} onClick={() => setAvanzar(avanzar ===0?80:avanzar-5)}>
-          <ChevronLeftIcon sx={{color:"##685454a8"}}/>
+      <Grid
+        container
+        spacing={2}
+        sx={{ width: "95%" }}
+        justifyContent={"space-between"}
+        marginY={"1rem"}
+        className="contain_button"
+      >
+        <IconButton
+          style={{ backgroundColor: "#ff000dd4" }}
+          onClick={() => setAvanzar(avanzar === 0 ? 80 : avanzar - 5)}
+        >
+          <ChevronLeftIcon sx={{ color: "##685454a8" }} />
         </IconButton>
-        <IconButton  style={{backgroundColor:"#ff000dd4"}} onClick={() => setAvanzar(avanzar !== 80 ? avanzar + 5 : 0)}>
-          <ChevronRightIcon sx={{color:"##685454a8"}}/>
+        <IconButton
+          style={{ backgroundColor: "#ff000dd4" }}
+          onClick={() => setAvanzar(avanzar !== 80 ? avanzar + 5 : 0)}
+        >
+          <ChevronRightIcon sx={{ color: "##685454a8" }} />
         </IconButton>
       </Grid>
     </div>
