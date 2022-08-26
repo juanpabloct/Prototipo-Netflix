@@ -4,12 +4,11 @@
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
 }
-.title{
+.sectionProfiles .title{
     text-align: center;
+    color: white;
     word-spacing: 1rem;
     letter-spacing: 0.3rem;
-    color: white;
-
 }
 .titleProfile{
     padding-top: 6px;
@@ -25,6 +24,6 @@
 .sectionProfiles{
     display: flex;
     flex-direction: column;
-    height: 70vh;
+    height: 100vh;
     justify-content: space-around;
 }

@@ -1,6 +1,15 @@
 /*Styles of the component menu*/
 .sectionMenu{
   color: white;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.sectionTitle{
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
 }
 
 .sectionMenu:hover{

@@ -13,8 +13,8 @@ export const Carousel = ({
   height = "100%",
 }: {
   gender: TypeMoviesInfo;
-  width: string;
-  height: string;
+  width?: string;
+  height?: string;
 }) => {
   const dispatch = useDispatch();
   const [avanzar, setAvanzar] = useState(0);
@@ -53,13 +53,13 @@ export const Carousel = ({
         className="contain_button"
       >
         <IconButton
-          style={{ backgroundColor: "#ff000dd4" }}
+          style={{ backgroundColor: "#6c6c6ccc" }}
           onClick={() => setAvanzar(avanzar === 0 ? 80 : avanzar - 5)}
         >
           <ChevronLeftIcon sx={{ color: "##685454a8" }} />
         </IconButton>
         <IconButton
-          style={{ backgroundColor: "#ff000dd4" }}
+          style={{ backgroundColor: "#6c6c6ccc" }}
           onClick={() => setAvanzar(avanzar !== 80 ? avanzar + 5 : 0)}
         >
           <ChevronRightIcon sx={{ color: "##685454a8" }} />

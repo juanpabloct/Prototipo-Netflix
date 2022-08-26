@@ -11,15 +11,15 @@ import { composeWithDevTools } from "@reduxjs/toolkit/dist/devtoolsExtension";
 import { ProfileReducer } from "./types/typeProfilesReducer";
 import profileReducer from "./reducers/profiles";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Profiles } from './components/profiles/profiles';
+import { Profiles } from "./components/profiles/profiles";
 export interface reducer {
   data: InitialState;
-  profiles:ProfileReducer;
+  profiles: ProfileReducer;
 }
 const store = configureStore({
   reducer: {
     data: ValuesMovieReducer.reducer,
-    profiles:profileReducer.reducer
+    profiles: profileReducer.reducer,
   },
   middleware: [thunkMiddleware],
 });
@@ -27,11 +27,10 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <Provider store={store}>
       <BrowserRouter>
-      <Routes>
-        
-        <Route path="/" element={<Profiles />}/>
-        <Route path="/home" element={<App />}/>
-      </Routes>
+        <Routes>
+          <Route path="/" element={<Profiles />} />
+          <Route path="/home" element={<App />} />
+        </Routes>
       </BrowserRouter>
     </Provider>
   </React.StrictMode>
