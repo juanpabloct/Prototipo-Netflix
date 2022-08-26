@@ -68,9 +68,9 @@ export const ShowMovie = () => {
           All Episodes
         </Button>
       </Grid>
-      <Box sx={{ marginTop: "2rem" }}>
-        <Carousel gender={popular} width={"90vw"} height={"25rem"} />
-      </Box>
+       <Box sx={{ marginTop: "5rem", height:"40%", overflow:"hidden"}}>
+        <Carousel gender={popular} width={"80vw"}  />
+      </Box> 
     </div>
   );
 };

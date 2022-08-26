@@ -16,7 +16,7 @@
     position: relative;
 
 }
-.title{
+.contentInfo .title{
     margin-top: 6px;
     font-weight: 800;
     font-size: 1.3rem;
@@ -39,10 +39,10 @@
 
 @media (min-width:1200px) {
     .overview{
-        font-size: 1rem;
-        line-height: 1.5rem;
+        font-size: 1.3rem;
+        line-height: 2.2rem;
     }
-    .title{
+    .contentInfo .title{
         font-size: 2rem;
     }
 }

@@ -5,7 +5,7 @@ import profile from "../assets/profile.jpg"
 import { ProfileReducer } from '../types/typeProfilesReducer';
 const initialState:ProfileReducer={
     profiles:[{ nombrePerfil:"Jorge", caratula:spiderman}, { nombrePerfil:"Felipe", caratula:stangerThings}, { nombrePerfil:"Valentina", caratula:profile}], 
-    profileSelected:{ nombrePerfil:"Jorge", caratula:spiderman}
+    profileSelected:{ nombrePerfil:"", caratula:""}
 }
 const ProfileReducer=createSlice({
     name:"Profiles",

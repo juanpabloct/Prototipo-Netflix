@@ -19,6 +19,8 @@ export const Carousel = ({
   const dispatch = useDispatch();
   const [avanzar, setAvanzar] = useState(0);
   const valor = `-${avanzar}%`;
+  console.log(valor);
+  
 
   return (
     <div className="contain" style={{ width, height }}>
@@ -54,13 +56,13 @@ export const Carousel = ({
       >
         <IconButton
           style={{ backgroundColor: "#6c6c6ccc" }}
-          onClick={() => setAvanzar(avanzar === 0 ? 80 : avanzar - 5)}
+          onClick={() => setAvanzar(avanzar === 0 ? 300 : avanzar -19.7)}
         >
           <ChevronLeftIcon sx={{ color: "##685454a8" }} />
         </IconButton>
         <IconButton
           style={{ backgroundColor: "#6c6c6ccc" }}
-          onClick={() => setAvanzar(avanzar !== 80 ? avanzar + 5 : 0)}
+          onClick={() => setAvanzar(avanzar>310?0:avanzar +19.7)}
         >
           <ChevronRightIcon sx={{ color: "##685454a8" }} />
         </IconButton>

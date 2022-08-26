@@ -1,5 +1,5 @@
 import MenuIcon from "@mui/icons-material/Menu";
-import { Box, IconButton, SwipeableDrawer } from "@mui/material";
+import { Box, IconButton } from "@mui/material";
 import { useState } from "react";
 import { Menu } from './menu';
 

@@ -2,33 +2,24 @@ import img from "../../assets/pngwing.com.png";
 import "./navbar.css";
 import { Grid } from "@mui/material";
 import { dateComplete } from "./dates";
-import imgUser from "../../publics/user.jpg";
-import { ComplementImage } from "../../Var Global/complementImage";
 import { useSelector } from "react-redux";
 import { reducer } from "../../main";
-import { MenuButton } from "../menu/menuButton";
 import { Profile } from "../profiles/profile";
+import { ComplementImage } from '../../Var Global/complementImage';
+import { ShowMovie } from "../showMovie/showMovie";
+import { SeccionLogoNetflix } from "./seccionLogoNetflix";
 
 export const Navbar = () => {
   const { backdrop_path } = useSelector((state: reducer) => {
     return state.data.showMovie;
   });
+  const {  showMovie} = useSelector(
+    (state: reducer) => state.data
+  );
   return (
-    <header className="navbar">
-      <Grid container justifyContent={"space-between"}>
-        <Grid
-          container
-          gap={"2"}
-          width="70%"
-          maxWidth={"500px"}
-          marginLeft={"3rem"}
-          justifyContent={"space-around"}
-        >
-          <img src={img} alt="Logo Netflix" title="Logo" className="logo" />
-          <span className="contentNavbar">{dateComplete}</span>
-        </Grid>
-      </Grid>
-      <Profile />
+    <header className="navbar" style={{backgroundImage:`url(${ComplementImage + showMovie.backdrop_path})`}}>
+      <SeccionLogoNetflix/>
+      <ShowMovie />
     </header>
   );
 };

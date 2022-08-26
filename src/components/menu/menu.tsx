@@ -37,6 +37,7 @@ export const Menu = ({
           marginLeft={"1.5rem"}
           alignItems={"center"}
           marginTop={"0.6rem"}
+          justifyContent={"space-between"}
         >
           <Grid
             item

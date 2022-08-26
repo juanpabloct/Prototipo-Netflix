@@ -1,29 +1,62 @@
 
 .contain_profile{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
+    display: flex;
+    width: 50%;
+    flex-flow: row wrap;
+    margin: auto;
 }
 .sectionProfiles .title{
     text-align: center;
+    font-size: 2rem;
     color: white;
     word-spacing: 1rem;
     letter-spacing: 0.3rem;
+    font-family: 'Nunito Sans', sans-serif;
+    margin: 4rem 0;
 }
 .titleProfile{
-    padding-top: 6px;
     color: white;
     padding-top:1rem;
+    font-family: 'Nunito Sans', sans-serif;
+    
 }
 .profile{
-    width: 100%;
     display: flex;
     flex-flow: column wrap;
     align-items: center;
+    flex: 4 4 30%;
 }
 .sectionProfiles{
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    justify-content: space-around;
+    height: 80vh;
+    justify-content: center;
+
+}
+
+.containAdd_Profile{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.containAdd_Profile .titleAddProfile{
+    color: white;
+    font-family: 'Nunito Sans', sans-serif;
+}
+.contain_allProfiles{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+.buttonAddProfile{
+    height:7rem;
+    width: 8rem;
+    border-radius: 50%;
+    margin-top: 3rem;
+}
+.buttonAddProfile:hover{
+    background-color: aliceblue;
+    cursor: pointer;
 }
