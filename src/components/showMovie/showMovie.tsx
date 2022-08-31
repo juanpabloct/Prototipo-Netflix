@@ -68,9 +68,14 @@ export const ShowMovie = () => {
           All Episodes
         </Button>
       </Grid>
-       <Box sx={{ marginTop: "5rem", height:"40%", overflow:"hidden"}}>
-        <Carousel gender={popular} width={"80vw"}  />
-      </Box> 
+      <div className="contenedor_carrusel_principal">
+        <Carousel
+          gender={popular}
+          width={"60vw"}
+          limiteSlider={170}
+          avance_slider={12}
+        />
+      </div>
     </div>
   );
 };

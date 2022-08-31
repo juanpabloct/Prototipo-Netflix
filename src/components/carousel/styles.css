@@ -36,11 +36,11 @@ figcaption{
 .parentSlider{
     display: flex;
     width: 90%;
-    height: 90%;
+    height: 100%;
 }
 
 .imgMovie{
-    height: 100%;
+    height: 80%;
     position: relative;
     transition: all 0.7s;
     object-fit: contain;
@@ -50,13 +50,15 @@ figcaption{
     border: 3px solid white;
     cursor: pointer;
     z-index: 30;
-    height: 100%;
+    height: 82%;
     margin-left: 2rem;
 }
 
 .gender{
     color: white;
     text-align: center;
+    margin: 0;
+    padding-top: 2rem;
 }
 
 .contain{
@@ -66,6 +68,7 @@ figcaption{
     flex-direction: column;
     position: relative;
     overflow: hidden;
+    height: 100%;
 }
 .contain_button{
     position: absolute;

@@ -36,7 +36,11 @@
     color: #cecece;
     margin-bottom: 0;
 }
-
+.contenedor_carrusel_principal{
+    margin-top: 1rem;
+    height: 80%;
+    position: absolute;
+}
 @media (min-width:1200px) {
     .overview{
         font-size: 1.3rem;
