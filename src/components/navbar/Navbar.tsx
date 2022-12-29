@@ -5,7 +5,7 @@ import { dateComplete } from "./dates";
 import { useSelector } from "react-redux";
 import { reducer } from "../../main";
 import { Profile } from "../profiles/profile";
-import { ComplementImage } from '../../Var Global/complementImage';
+import { ComplementImage } from "../../Var Global/complementImage";
 import { ShowMovie } from "../showMovie/showMovie";
 import { SeccionLogoNetflix } from "./seccionLogoNetflix";
 
@@ -13,13 +13,18 @@ export const Navbar = () => {
   const { backdrop_path } = useSelector((state: reducer) => {
     return state.data.showMovie;
   });
-  const {  showMovie} = useSelector(
-    (state: reducer) => state.data
-  );
+  const { showMovie } = useSelector((state: reducer) => state.data);
   return (
-    <header className="navbar" style={{backgroundImage:`url(${ComplementImage + showMovie.backdrop_path})`}}>
-      <SeccionLogoNetflix/>
-      <ShowMovie />
+    <header
+      className="navbar"
+      style={{
+        backgroundImage: `url(${ComplementImage + showMovie.backdrop_path})`,
+      }}
+    >
+      <Grid container height={"70%"}>
+        <SeccionLogoNetflix />
+        <ShowMovie />
+      </Grid>
     </header>
   );
 };

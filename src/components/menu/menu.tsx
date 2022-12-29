@@ -3,6 +3,7 @@ import { Grid, Box } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { contentMenu } from "../../Var Global/sectionsMenu";
 import { Profile } from "../profiles/profile";
+import { height } from "@mui/system";
 
 export const Menu = ({
   setShowMenu,
@@ -10,22 +11,26 @@ export const Menu = ({
   setShowMenu: React.Dispatch<React.SetStateAction<boolean>>;
 }) => {
   return (
-    <Box
+    <Grid
+      container
+      zIndex={50}
       height={"100vh"}
       width={"100%"}
       position={"fixed"}
       top={"0"}
       left={0}
-      sx={{ background: "linear-gradient(90deg, black, 70%, #ffffff00)" }}
     >
       <Grid
         container
         direction={"column"}
-        width={"40%"}
+        width={"10%"}
         minWidth={"260px"}
         height={"100%"}
         wrap={"nowrap"}
-        sx={{ backgroundColor: "black", marginTop: "0" }}
+        sx={{
+          background: "linear-gradient(90deg, black,100%, #ffffff00)",
+          marginTop: "0",
+        }}
       >
         <Grid
           container
@@ -66,6 +71,20 @@ export const Menu = ({
           ))}
         </Grid>
       </Grid>
-    </Box>
+      <Grid
+        sx={{
+          background: "linear-gradient(90deg, black,60%, #ffffff00)",
+          marginTop: "0",
+          color: "white",
+          width: "80%",
+          height: "100%",
+        }}
+      >
+        <div
+          className="menuHijoCierre"
+          onClick={() => setShowMenu(false)}
+        ></div>
+      </Grid>
+    </Grid>
   );
 };
