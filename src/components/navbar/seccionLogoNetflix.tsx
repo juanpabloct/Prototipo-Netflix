@@ -1,11 +1,17 @@
-import { dateComplete } from "./dates"
-import { Profile } from '../profiles/profile';
-import { Grid } from "@mui/material";
-import img from "../../assets/pngwing.com.png"
-export const SeccionLogoNetflix=()=>{
-    return (
+import { dateComplete } from "./dates";
+import { Profile } from "../profiles/profile";
+import { Box, Grid } from "@mui/material";
+import img from "../../assets/pngwing.com.png";
+import { MenuButton } from "../menu/menuButton";
+export const SeccionLogoNetflix = () => {
+  return (
     <>
-      <Grid container justifyContent={"space-between"}  marginTop={"1.5rem"} alignItems={"center"} position={"relative"}>
+      <Grid
+        container
+        justifyContent={"space-between"}
+        alignItems={"center"}
+        position={"relative"}
+      >
         <Grid
           container
           gap={"2"}
@@ -14,6 +20,15 @@ export const SeccionLogoNetflix=()=>{
           marginLeft={"3rem"}
           justifyContent={"space-around"}
         >
+          <div
+            style={{
+              position: "relative",
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
+            <MenuButton />
+          </div>
           <img src={img} alt="Logo Netflix" title="Logo" className="logo" />
           <span className="contentNavbar">{dateComplete}</span>
         </Grid>
@@ -22,5 +37,5 @@ export const SeccionLogoNetflix=()=>{
         </div>
       </Grid>
     </>
-    )
-}
+  );
+};
