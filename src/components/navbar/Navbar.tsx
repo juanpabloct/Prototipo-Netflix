@@ -21,7 +21,7 @@ export const Navbar = () => {
         backgroundImage: `url(${ComplementImage + showMovie.backdrop_path})`,
       }}
     >
-      <Grid container height={"70%"}>
+      <Grid container height={"100%"} alignContent={"space-around"}>
         <SeccionLogoNetflix />
         <ShowMovie />
       </Grid>
