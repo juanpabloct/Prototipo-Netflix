@@ -5,7 +5,6 @@ import { Button, Grid } from "@mui/material";
 import PlayCircleFilledWhiteIcon from "@mui/icons-material/PlayCircleFilledWhite";
 import "./showMovie.css";
 import { Carousel } from "../carousel/Carousel";
-import { Box } from "@mui/system";
 export const ShowMovie = () => {
   const { overview, release_date, title, genre_ids, vote_average } =
     useShowMovie();
@@ -18,63 +17,64 @@ export const ShowMovie = () => {
     .flat();
   return (
     <div className="contentInfo">
-      {filtres.map((filter, index) => {
-        return (
-          <span className="genre" key={filter.id}>
-            {filter.name}
-          </span>
-        );
-      })}
-      <h1 className="title">{`${title} - ${year}`}</h1>
-      <p className="overview">{overview}</p>
-      <Calificion vote_average={vote_average} />
-      <Grid
-        container
-        spacing={2}
-        gap={4}
-        height={"2rem"}
-        alignItems={"center"}
-        wrap={"wrap"}
-      >
-        <Button
-          variant="contained"
-          style={{
-            backgroundColor: "red",
-            fontSize: "0.7rem",
-            fontWeight: "600",
-            height: "2.2rem",
-            width: "20%",
-            minWidth: "125px",
-            maxWidth: "200px",
-          }}
-          endIcon={<PlayCircleFilledWhiteIcon />}
+      <Grid width={"100%"}>
+        <h1 className="title">{`${title} - ${year}`}</h1>
+        <Grid>
+          {filtres.map((filter, index) => {
+            return (
+              <span className="genre" key={filter.id}>
+                {filter.name}
+              </span>
+            );
+          })}
+        </Grid>
+        <p className="overview">{overview}</p>
+        <Grid>
+          <Calificion vote_average={vote_average} />
+        </Grid>
+        <Grid
+          container
+          spacing={2}
+          gap={4}
+          height={"2rem"}
+          alignItems={"center"}
+          wrap={"wrap"}
         >
-          Stream Now
-        </Button>
-        <Button
-          variant="outlined"
-          style={{
-            backgroundColor: "black",
-            color: "white",
-            borderColor: "white",
-            fontSize: "0.7rem",
-            fontWeight: "600",
-            height: "2.2rem",
-            width: "20%",
-            minWidth: "125px",
-            maxWidth: "200px",
-          }}
-        >
-          All Episodes
-        </Button>
+          <Button
+            variant="contained"
+            style={{
+              backgroundColor: "red",
+              fontSize: "0.7rem",
+              fontWeight: "600",
+              height: "2.2rem",
+              width: "20%",
+              minWidth: "125px",
+              maxWidth: "200px",
+            }}
+            endIcon={<PlayCircleFilledWhiteIcon />}
+          >
+            Stream Now
+          </Button>
+          <Button
+            variant="outlined"
+            style={{
+              backgroundColor: "black",
+              color: "white",
+              borderColor: "white",
+              fontSize: "0.7rem",
+              fontWeight: "600",
+              height: "2.2rem",
+              width: "20%",
+              minWidth: "125px",
+              maxWidth: "200px",
+            }}
+          >
+            All Episodes
+          </Button>
+        </Grid>
       </Grid>
       <div className="contenedor_carrusel_principal">
-        <Carousel
-          gender={popular}
-          width={"60vw"}
-          limiteSlider={170}
-          avance_slider={12}
-        />
+        <Carousel gender={popular} width={"60vw"} style={"imgpopular"} />
       </div>
     </div>
   );
