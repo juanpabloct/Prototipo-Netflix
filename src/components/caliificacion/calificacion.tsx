@@ -11,7 +11,7 @@ export const Calificion = ({ vote_average }: { vote_average: number }) => {
   return (
     <Box
       component="fieldset"
-      mb={3}
+      mb={1}
       borderColor="transparent"
       className="contentCalification"
     >
@@ -21,7 +21,7 @@ export const Calificion = ({ vote_average }: { vote_average: number }) => {
         onChange={(event: any, newValue: any) => {
           setValue(newValue);
         }}
-        sx={{ marginBottom: "1rem", fontSize: "1.3rem" }}
+        sx={{ marginBottom: "", fontSize: "1.3rem" }}
         readOnly
       />
     </Box>
