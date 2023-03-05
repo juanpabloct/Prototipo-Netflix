@@ -23,19 +23,11 @@ export const Content = () => {
         direction={"column"}
         justifyContent={"center"}
         position={"relative"}
+        height={"100%"}
       >
         <Navbar />
         <Main />
       </Grid>
-      <Box
-        position={"absolute"}
-        top={0}
-        left={0}
-        marginLeft={""}
-        marginTop={"2.2rem"}
-      >
-        <MenuButton />
-      </Box>
     </>
   );
 };
