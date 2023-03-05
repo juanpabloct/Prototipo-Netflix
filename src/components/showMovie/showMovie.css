@@ -11,13 +11,16 @@
 }
 
 .contentInfo{
-    margin-left:5rem;
+    display: flex;
+    flex-flow: wrap column;
+    height: 90%;
+    padding-left:5rem;
     color:white;
     position: relative;
+    justify-content: space-around;
 
 }
 .contentInfo .title{
-    margin-top: 6px;
     font-weight: 800;
     font-size: 1.3rem;
     margin-bottom: 0;
@@ -35,18 +38,46 @@
     line-height: 1.3rem;
     color: #cecece;
     margin-bottom: 0;
+    margin: 0;
+}
+.imgpopular{
+    height: 78%;
+    cursor: pointer;
+    border:rgb(0, 0, 65) solid 2px;
+    transition: all 2s ease-in;
+    border-radius: 0.3rem;
+}
+.imgpopular:hover{
+    border: white solid 3px;
+    cursor: pointer;
+    margin-left: 1.5rem;
+    transition: all 0.5s ease-in-out;
 }
 .contenedor_carrusel_principal{
+    position: relative;
     margin-top: 1rem;
-    height: 100%;
-    position: absolute;
+    height: 48%;
 }
 @media (min-width:1200px) {
     .overview{
         font-size: 1.3rem;
-        line-height: 2.2rem;
+        line-height: 1.9rem;
+        width: 60%;
     }
     .contentInfo .title{
         font-size: 2rem;
+    }
+   .contenedor_carrusel_principal {
+    height: 50%;
+    }
+}
+@media (max-width:1200px) {
+    .overview{
+        font-size: 1rem;
+        line-height: 1.5rem;
+        width: 80%;
+    }
+    .contentInfo .title{
+        font-size: 1.5rem;
     }
 }
