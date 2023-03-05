@@ -1,7 +1,5 @@
 .navbar{
     width: 100%;
-    margin-left: rem;
-    margin-bottom: 1.5rem;
     position: relative;
     height: 100vh;
     flex-direction: column;
