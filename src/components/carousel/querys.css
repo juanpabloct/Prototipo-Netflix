@@ -1,11 +1,11 @@
 @media (min-width:1200px) {
     .imgMovie{
-        width: 18vw;
+        width: 16vw;
     }
 }
 @media (max-width:1200px) {
     .imgMovie{
-        width: 22vw;
+        width: 20vw;
     }
     .genre{
         font-size:0.8rem;
@@ -14,11 +14,11 @@
 
 @media (max-width:800px) {
     .imgMovie{
-        width: 34vw;
+        width: 32vw;
     }
 }
 @media (max-width:600px) {
     .imgMovie{
-        width: 50vw;
+        width: 30vw;
     }
 }
