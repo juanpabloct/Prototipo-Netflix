@@ -19,6 +19,7 @@ export const Navbar = () => {
       className="navbar"
       style={{
         backgroundImage: `url(${ComplementImage + showMovie.backdrop_path})`,
+        aspectRatio: "1 / 1",
       }}
     >
       <Grid container height={"100%"} alignContent={"space-around"}>
