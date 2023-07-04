@@ -12,7 +12,7 @@ export const Profile = () => {
           alt="Perfil"
           sx={{
             height: "4rem",
-            width:"4rem",
+            width: "4rem",
             filter: "brightness(1.3)",
             minWidth: "80px",
           }}
