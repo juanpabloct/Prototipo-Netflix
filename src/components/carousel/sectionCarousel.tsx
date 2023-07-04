@@ -6,7 +6,7 @@ export const SectionCarousel = () => {
   return (
     <div className="contain_all_carousel">
       {data.map((movie, id) => {
-        return <Carousel gender={movie} width={"100%"} />;
+        return <Carousel gender={movie} width={"100%"} key={movie.name} />;
       })}
     </div>
   );
