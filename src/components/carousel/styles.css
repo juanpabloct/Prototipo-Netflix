@@ -16,9 +16,8 @@
     display: flex;
     flex-direction: row;
     height: 100%;
-    transition: all ease s;
+    transition: all ease-in-out 2s;
     gap: 2rem;
-    transition: all 1s;
 }
 
 figcaption{
@@ -32,36 +31,36 @@ figcaption{
 }
 
 .imgMovie{
-    height: 17rem;
     position: relative;
     transition: all 0.7s;
     object-fit: contain;
-    width: 90%;
     border-radius: 0.3rem;
     border: rgb(21, 21, 95) solid 2px;
-    transition: 1s border height ease-in-out
+    scroll-snap-align: start;
+    transition: 1s border ease-in-out;
 }
 .imgMovie:hover{
     border: 3px solid white;
     cursor: pointer;
     z-index: 30;
-    height: 20rem;
     margin-left: 2rem;
+    transform: rotate3d(1);
     transition: all 1s ease-out;
 }
 
 .gender{
-    color: white;
+    color: black;
     text-align: center;
     margin: 0;
     border: white solid 2px ;
     border-top: none;
     padding: 0 2rem;
-    border-radius: 0.5rem;
+    border-radius: 0.3rem;
+    background-color: white;
 }
 
 .contain{
-    gap:1rem;
+    gap:3rem;
     height: 100%;
     display: flex;
     align-items: center;
