@@ -34,7 +34,7 @@ export const Carousel = ({
             position: "absolute",
             left: "0",
             zIndex: "30",
-            top: "40%",
+            top: "55%",
           }}
           onClick={() => {
             gender;
@@ -80,7 +80,7 @@ export const Carousel = ({
             position: "absolute",
             right: "1rem",
             zIndex: "30",
-            top: "40%",
+            top: "55%",
           }}
           onClick={() => {
             if (sizeImage && contain.current && ValorLimite) {
