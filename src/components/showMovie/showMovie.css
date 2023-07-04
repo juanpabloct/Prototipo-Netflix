@@ -41,7 +41,7 @@
     margin: 0;
 }
 .imgpopular{
-    height: 78%;
+    height: 70%;
     cursor: pointer;
     border:rgb(0, 0, 65) solid 2px;
     transition: all 2s ease-in;
